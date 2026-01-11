@@ -1,0 +1,644 @@
+/* SWATCHES 
+
+#475149 - dark green
+#738678 - med green
+#AABFAF - light green
+
+#F5EEDC - beige
+
+*/
+
+
+
+/* RESPONSIVENESS */
+/* Prevent padding from causing overflow and make sizing predictable */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Make media scale down inside containers */
+img, video, svg { max-width: 100%; height: auto; }
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5EEDC;
+  color: #475149; 
+  font-family: "utopia-std", serif;
+  line-height: 1.6;
+  padding-top: 5rem;
+}
+
+
+
+
+/* ----- TYPOGRAPHY ----- */
+h1 {
+  font-family: "fenway-park-jf", sans-serif;
+  font-style: normal;
+  color: #738678;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  line-height: 3rem;
+}
+
+h2 {
+  color: #738678;
+  font-family: "fenway-park-jf", sans-serif;
+  font-size: 5rem;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+  line-height: 2rem;
+}
+
+h3 {
+  color: #738678;
+  font-size: 1.5em;
+  margin-top: 1.5rem;
+  line-height: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+footer h3 {
+  color: white;
+}
+
+footer p {
+  font-size: .7em;
+}
+
+
+
+
+
+/* ----- NAV ------ */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #475149;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 960px;         /* same as .container */
+  margin: 0 auto;           /* center on page */
+  padding: 0.625em 1.5em;   /* side padding matches .container */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  color: white;
+  font-family: "fenway-park-jf", sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+  text-decoration: none;
+}
+
+.title-sub {
+  font-family: "utopia-std";
+  font-size: 1.5rem;
+  letter-spacing: .3em;
+  margin-left: .3em;
+}
+
+
+.nav-links {
+  font-family: "fenway-park-jf", sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: block;          
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; 
+}
+
+/* ----- MAIN ----- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.625em 1.5em;
+}
+
+section {
+  border-bottom: 1px solid lightgrey; /* section divider */
+  padding: 2em 1.5em;
+  scroll-margin-top: .5rem;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+article {
+  flex: 1;
+}
+
+/* --- HERO --- */
+.hero-section {
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.hero-image {
+  display: flex;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: -5rem;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.page-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-title {
+  margin: 0;   
+}
+
+.hero-title > span {
+  display: block;      
+}
+
+.title-1 {
+  font-size: 10rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  letter-spacing: -.75rem;
+}
+
+.title-2 {
+  font-family: "utopia-std";
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: .4rem;
+  margin-bottom: 0;
+}
+
+.title-3 {
+  font-family: "utopia-std";
+  font-size: 2rem;
+  font-weight: 200;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.headline {
+  font-size: 3.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  padding: 0 1.5em;
+  text-align: center;
+}
+
+.hero-text p {
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.hero-cta {
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.hero-cta-wrap {
+  display: flex;
+  justify-content: center;  
+}
+
+
+
+
+/* ----- BUTTONS ----- */
+.btn {
+  display: inline-block;
+  font-family: "fenway-park-jf", sans-serif;
+  background-color: #475149;    
+  color: #F5EEDC;                 
+  padding: 0.6em 1.2em;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #738678;   
+  color: white; 
+  text-decoration: none;
+}
+
+
+/* -----LINKS----- */
+a {
+  color: #AABFAF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: white;
+}
+
+
+
+/* --- ABOUT ---*/
+.about-photo {
+  margin: auto;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top;
+  object-position: 80% 25%;
+}
+
+
+.photo-block {
+  background-color: #738678;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+
+.photo-block-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem; 
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.photo-block-inner img {
+  flex: 0 1 30%;
+  max-width: 30%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+
+
+
+/* --- REVIEWS. ---*/
+
+.review-card {
+  background-color: #475149;
+  text-align: left;
+  color: white;
+  border-radius: 1em;
+  padding: 1.25em;
+}
+
+.review-author {
+  color: #AABFAF;
+  display: block;
+  text-align: right;
+}
+
+
+
+
+/* --- MENU --- */
+.menu-section {
+  display: flex;
+  gap: 1em;     
+  padding: 2em 0;
+  border-bottom: none;
+}
+
+.menu-header {
+  font-family: "fenway-park-jf", sans-serif;
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: -.5rem;
+  line-height: 4rem;
+}
+
+.menu-header-additional {
+  display: flex;
+  margin: auto;
+  font-family: "fenway-park-jf", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.menu-header-small {
+  font-family: "utopia-std", serif;
+  color: white;
+  text-align: center;
+  margin-bottom: -.75rem;
+}
+
+
+.menu-price {
+  font-family: "utopia-std", serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  color: #F5EEDC;
+  text-align: center;
+  border-top: 1px solid #F5EEDC;
+  border-bottom: 1px solid #F5EEDC;
+}
+
+.menu-column {
+  flex: 1;
+  background-color: #475149;   
+  color: #F5EEDC;              
+  padding: 1.5em;
+  border-radius: 1em;          
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+}
+
+.menu-column ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-column li {
+  margin-bottom: .6rem;
+  font-size: 1.2rem;
+}
+
+.additional-services {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu-item {
+  color: #738678;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.additional-services .menu-price {
+  color: #738678;
+  font-weight: 100;
+  font-style: italic;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-desc {
+  text-align: center;
+}
+
+
+
+
+/* --- CONTACT FORM ---*/
+.contact-section {
+  background: #6f7f76; 
+  padding: 4rem 1rem 4.5rem; /* 64px 16px 72px */
+  border-radius: 1em;
+}
+
+.contact-wrap {
+  max-width: 53.75rem; /* 860px */
+  margin: 0 auto;
+}
+
+.contact-title {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(3.5rem, 7vw, 5.5rem); /* 56px – 88px */
+  line-height: 0.95;
+  color: #f4eedf;
+  font-family: "fenway-park-jf", sans-serif;
+  font-weight: 400;
+}
+
+.contact-subtitle {
+  margin: 0.625rem 0 2.125rem; /* 10px 0 34px */
+  text-align: center;
+  color: #f4eedf;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 0.875rem; /* 14px */
+}
+
+/* Form layout */
+.contact-form {
+  margin-top: 0;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.125rem 3rem; /* 18px 48px */
+}
+
+.field label {
+  display: block;
+  margin: 0 0 0.5rem; /* 8px */
+  color: #f4eedf;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 0.875rem; /* 14px */
+}
+
+label span {
+  color: #f4eedf;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: "utopia-std", serif;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  color: #1f1f1f;
+}
+
+.field-notes {
+  margin-top: 2rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.contact-form .btn {
+  font-size: 1.75rem;
+}
+
+
+/* --- FOOTER --- */
+footer {
+  background-color: #475149;
+  padding: 2rem 1.5rem;
+}
+
+.footer-simple {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;          
+  text-align: center;
+}
+
+.footer-email {
+  color: #f4eedf;
+  font-family: "utopia-std", serif;
+  font-size: 1.5rem;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.footer-socials img {
+  width: 48px;
+  height: 48px;
+  display: block;
+  opacity: 0.9;
+}
+
+.footer-socials a:hover img {
+  opacity: 1;
+}
+
+/* Optional: keyboard focus visibility */
+.footer-email:focus-visible,
+.footer-socials a:focus-visible {
+  outline: 2px solid #f4eedf;
+  outline-offset: 4px;
+}
+/* =========================
+   RESPONSIVE BREAKPOINTS
+   ========================= */
+
+/* -------- Tablet & down -------- */
+@media (max-width: 900px) {
+
+  /* Menu columns stack */
+  .menu-section {
+    flex-direction: column;
+  }
+
+  /* Photo blocks wrap */
+  .photo-block-inner {
+    flex-wrap: wrap;
+  }
+
+  .photo-block-inner img {
+    flex: 1 1 48%;
+    max-width: 48%;
+  }
+}
+
+
+/* -------- Mobile -------- */
+@media (max-width: 700px) {
+
+  /* Nav stacks */
+  .nav-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Form becomes 1 column */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Footer stacks */
+  .footer-simple {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-simple {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .footer-email {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* -------- Small phones -------- */
+@media (max-width: 500px) {
+
+  /* Photo blocks single column */
+  .photo-block-inner img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+}
+
+
