@@ -249,8 +249,17 @@
       <h1 class="contact-title">Contact Us</h1>
       <p class="contact-subtitle">Contact us today to set up a free consultation!</p>
 
-      <!-- Replace action with your endpoint (Formspree/Netlify/etc.) -->
-      <form class="contact-form" action="#" method="POST">
+      <form class="contact-form"
+        name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <p hidden>
+          <label>
+            Don’t fill this out:
+            <input name="bot-field" />
+          </label>
+        </p>
+
         <div class="grid-2">
           <div class="field">
             <label for="name">Name<span aria-hidden="true">*</span></label>
@@ -297,6 +306,7 @@
           <button type="submit" class="btn submit-btn">Submit</button>
         </div>
       </form>
+
     </div>
   </section>
 
