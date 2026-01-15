@@ -43,18 +43,39 @@
 <nav>
   <div class="nav-container">
     <a href="index.html" class="site-title">
-  <span class="title-main">I Do</span> 
-  <span class="title-sub">Boozes & Brews</span>
-</a>
+      <span class="title-main">I Do</span> 
+      <span class="title-sub">Boozes & Brews</span>
+    </a>
 
+    <!-- Desktop nav -->
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <!-- Hamburger button (mobile only) -->
+    <button
+      class="nav-toggle"
+      id="navToggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+</div>
 
 <main>
   <div class="container">
@@ -344,6 +365,27 @@
   </div>
 </footer>
 
+<script>
+  const toggle = document.getElementById("navToggle");
+  const menu = document.getElementById("mobileMenu");
+
+  toggle.addEventListener("click", () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+
+    toggle.setAttribute("aria-expanded", !expanded);
+    toggle.classList.toggle("is-open");
+    menu.hidden = expanded;
+  });
+
+  // Close menu when a link is clicked
+  menu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.classList.remove("is-open");
+      menu.hidden = true;
+    });
+  });
+</script>
 
 </body>
 </html>
