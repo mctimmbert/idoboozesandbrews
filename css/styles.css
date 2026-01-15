@@ -665,6 +665,20 @@ footer {
   .nav-container {
     flex-direction: row;
     gap: 0.75rem;
+    padding: 0.5rem 1rem; /* smaller header padding on phones */
+  }
+
+  .site-title {
+    font-size: 1.9rem;    /* was 3em */
+    line-height: 1.1;
+  }
+
+  .title-sub {
+    display: block;       /* forces "Brews & ..." to behave predictably */
+    font-size: 0.95rem;
+    letter-spacing: 0.18em; /* reduce spacing so it doesn't wrap weird */
+    margin-left: 0;         /* remove left offset on mobile */
+    margin-top: 0.15rem;
   }
 
   /* Hide desktop nav links */
@@ -676,6 +690,24 @@ footer {
   .nav-toggle {
     display: block;
   }
+
+    /* --- HERO: prevent overlap on mobile --- */
+  .hero-image {
+    margin-bottom: 0;     /* remove the -5rem overlap */
+    max-width: 100%;
+  }
+
+  .title-1 {
+    font-size: 5.5rem;    /* was 10rem */
+    letter-spacing: -0.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .title-2 { font-size: 2.2rem; }
+  .title-3 { font-size: 1.4rem; }
+
+  .headline { font-size: 2.5rem; }
+
 
   /* Form becomes 1 column */
   .grid-2 {
