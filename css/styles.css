@@ -31,15 +31,12 @@ body {
   color: #475149; 
   font-family: "utopia-std", serif;
   line-height: 1.6;
+  padding-top: 5rem;
   margin: 0;
 }
 
 main {
   flex: 1;
-}
-
-.page-contact main {
-  margin-top: 5rem;
 }
 
 
