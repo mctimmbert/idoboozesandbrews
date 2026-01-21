@@ -25,13 +25,21 @@ html {
 
 body {
   background-color: #F5EEDC;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  
   color: #475149; 
   font-family: "utopia-std", serif;
   line-height: 1.6;
-  padding-top: 5rem;
 }
 
+main {
+  flex: 1;
+}
 
+.page-contact main {
+  margin-top: 5rem;
+}
 
 
 /* ----- TYPOGRAPHY ----- */
@@ -210,7 +218,7 @@ nav {
 
 section {
   border-bottom: 1px solid lightgrey; /* section divider */
-  padding: 2em 1.5em;
+  margin: 3.5rem auto;
   scroll-margin-top: .5rem;
 }
 
@@ -224,6 +232,7 @@ article {
 
 /* --- HERO --- */
 .hero-section {
+  padding-top: 3rem;
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
