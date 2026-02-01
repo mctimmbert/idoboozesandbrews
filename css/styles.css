@@ -8,27 +8,32 @@
 
 */
 
-
-
 /* RESPONSIVENESS */
 /* Prevent padding from causing overflow and make sizing predictable */
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* Make media scale down inside containers */
-img, video, svg { max-width: 100%; height: auto; }
-
-
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #F5EEDC;
+  background-color: #f5eedc;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;  
-  color: #475149; 
+  min-height: 100vh;
+  color: #475149;
   font-family: "utopia-std", serif;
   line-height: 1.6;
   padding-top: 5rem;
@@ -39,10 +44,10 @@ main {
   flex: 1;
 }
 
-
 /* ----- TYPOGRAPHY ----- */
 h1 {
   font-family: "fenway-park-jf", sans-serif;
+  font-weight: 400;
   font-style: normal;
   color: #738678;
   font-size: 6rem;
@@ -52,6 +57,8 @@ h1 {
 
 h2 {
   color: #738678;
+  font-weight: 400;
+  font-style: normal;
   font-family: "fenway-park-jf", sans-serif;
   font-size: 5rem;
   margin-top: 1.5em;
@@ -80,12 +87,8 @@ footer h3 {
 }
 
 footer p {
-  font-size: .7em;
+  font-size: 0.7em;
 }
-
-
-
-
 
 /* ----- NAV ------ */
 nav {
@@ -98,9 +101,9 @@ nav {
 }
 
 .nav-container {
-  max-width: 960px;         /* same as .container */
-  margin: 0 auto;           /* center on page */
-  padding: 0.625em 1.5em;   /* side padding matches .container */
+  max-width: 960px; /* same as .container */
+  margin: 0 auto; /* center on page */
+  padding: 0.625em 1.5em; /* side padding matches .container */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -117,10 +120,9 @@ nav {
 .title-sub {
   font-family: "utopia-std";
   font-size: 1.5rem;
-  letter-spacing: .3em;
-  margin-left: .3em;
+  letter-spacing: 0.3em;
+  margin-left: 0.3em;
 }
-
 
 .nav-links {
   font-family: "fenway-park-jf", sans-serif;
@@ -133,11 +135,11 @@ nav {
 }
 
 .nav-links a {
-  display: block;          
+  display: block;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
-  padding-right: 1.5rem; 
+  padding-right: 1.5rem;
 }
 
 /* --- HAMBURGER MENU --- */
@@ -155,7 +157,9 @@ nav {
   height: 3px;
   margin: 5px 0;
   background-color: white;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 /* Mobile dropdown panel */
@@ -168,15 +172,17 @@ nav {
 
   /* Attach menu to fixed nav */
   position: fixed;
-  top: 5rem;              /* matches body padding-top */
+  top: 5rem; /* matches body padding-top */
   left: 0;
   right: 0;
   z-index: 999;
 
   /* Smooth open animation defaults */
   transform: translateY(-10px);
-  opacity: 1;             /* visible when not [hidden] */
-  transition: opacity 200ms ease, transform 200ms ease;
+  opacity: 1; /* visible when not [hidden] */
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
 }
 
 /* When hidden, remove from layout entirely */
@@ -190,7 +196,7 @@ nav {
   padding: 1rem;
   font-family: "fenway-park-jf", sans-serif;
   font-size: 1.5rem;
-  color: #F5EEDC;
+  color: #f5eedc;
 }
 
 /* Animate hamburger into X */
@@ -206,7 +212,6 @@ nav {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-
 /* ----- MAIN ----- */
 .container {
   max-width: 960px;
@@ -217,7 +222,7 @@ nav {
 section {
   border-bottom: 1px solid lightgrey; /* section divider */
   margin: 3.5rem auto;
-  scroll-margin-top: .5rem;
+  scroll-margin-top: 0.5rem;
 }
 
 section:last-of-type {
@@ -235,7 +240,6 @@ article {
   display: flex;
   flex-direction: column;
 }
-
 
 .hero-image {
   display: flex;
@@ -259,25 +263,25 @@ article {
 }
 
 .hero-title {
-  margin: 0;   
+  margin: 0;
 }
 
 .hero-title > span {
-  display: block;      
+  display: block;
 }
 
 .title-1 {
   font-size: 10rem;
   font-weight: 400;
   margin-bottom: 3rem;
-  letter-spacing: -.75rem;
+  letter-spacing: -0.75rem;
 }
 
 .title-2 {
   font-family: "utopia-std";
   font-size: 3rem;
   font-weight: bold;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
   margin-bottom: 0;
 }
 
@@ -312,18 +316,17 @@ article {
 
 .hero-cta-wrap {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
-
-
-
 
 /* ----- BUTTONS ----- */
 .btn {
   display: inline-block;
   font-family: "fenway-park-jf", sans-serif;
-  background-color: #475149;    
-  color: #F5EEDC;                 
+  font-weight: 400;
+  font-style: normal;
+  background-color: #475149;
+  color: #f5eedc;
   padding: 0.6em 1.2em;
   font-size: 2rem;
   font-weight: bold;
@@ -335,15 +338,14 @@ article {
 }
 
 .btn:hover {
-  background-color: #738678;   
-  color: white; 
+  background-color: #738678;
+  color: white;
   text-decoration: none;
 }
 
-
 /* -----LINKS----- */
 a {
-  color: #AABFAF;
+  color: #aabfaf;
   text-decoration: none;
   font-weight: bold;
 }
@@ -351,8 +353,6 @@ a {
 a:hover {
   color: white;
 }
-
-
 
 /* --- ABOUT ---*/
 .about-photo {
@@ -365,7 +365,6 @@ a:hover {
   object-position: 80% 25%;
 }
 
-
 .photo-block {
   background-color: #738678;
   padding-top: 2rem;
@@ -374,11 +373,10 @@ a:hover {
   margin-right: calc(50% - 50vw);
 }
 
-
 .photo-block-inner {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 1.5rem; 
+  padding: 0 1.5rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -393,9 +391,6 @@ a:hover {
   border-radius: 0.5rem;
 }
 
-
-
-
 /* --- REVIEWS. ---*/
 
 .review-card {
@@ -407,18 +402,15 @@ a:hover {
 }
 
 .review-author {
-  color: #AABFAF;
+  color: #aabfaf;
   display: block;
   text-align: right;
 }
 
-
-
-
 /* --- MENU --- */
 .menu-section {
   display: flex;
-  gap: 1em;     
+  gap: 1em;
   padding: 2em 0;
   border-bottom: none;
 }
@@ -426,10 +418,12 @@ a:hover {
 .menu-header {
   font-family: "fenway-park-jf", sans-serif;
   font-size: 4rem;
+  font-weight: 400;
+  font-style: normal;
   color: white;
   text-align: center;
   margin-top: 1rem;
-  margin-bottom: -.5rem;
+  margin-bottom: -0.5rem;
   line-height: 4rem;
 }
 
@@ -437,6 +431,8 @@ a:hover {
   display: flex;
   margin: auto;
   font-family: "fenway-park-jf", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 3rem;
   text-align: center;
 }
@@ -445,9 +441,8 @@ a:hover {
   font-family: "utopia-std", serif;
   color: white;
   text-align: center;
-  margin-bottom: -.75rem;
+  margin-bottom: -0.75rem;
 }
-
 
 .menu-price {
   font-family: "utopia-std", serif;
@@ -456,19 +451,19 @@ a:hover {
   margin-top: 2rem;
   margin-bottom: 1.5rem;
   padding: 1rem;
-  color: #F5EEDC;
+  color: #f5eedc;
   text-align: center;
-  border-top: 1px solid #F5EEDC;
-  border-bottom: 1px solid #F5EEDC;
+  border-top: 1px solid #f5eedc;
+  border-bottom: 1px solid #f5eedc;
 }
 
 .menu-column {
   flex: 1;
-  background-color: #475149;   
-  color: #F5EEDC;              
+  background-color: #475149;
+  color: #f5eedc;
   padding: 1.5em;
-  border-radius: 1em;          
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+  border-radius: 1em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .menu-column ul {
@@ -479,7 +474,7 @@ a:hover {
 }
 
 .menu-column li {
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
   font-size: 1.2rem;
 }
 
@@ -508,12 +503,9 @@ a:hover {
   text-align: center;
 }
 
-
-
-
 /* --- CONTACT FORM ---*/
 .contact-section {
-  background: #6f7f76; 
+  background: #6f7f76;
   padding: 4rem 1rem 4.5rem; /* 64px 16px 72px */
   border-radius: 1em;
 }
@@ -531,6 +523,7 @@ a:hover {
   color: #f4eedf;
   font-family: "fenway-park-jf", sans-serif;
   font-weight: 400;
+  font-style: normal;
 }
 
 .contact-subtitle {
@@ -592,7 +585,6 @@ label span {
   font-size: 1.75rem;
 }
 
-
 /* --- FOOTER --- */
 footer {
   background-color: #475149;
@@ -605,7 +597,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;          
+  gap: 2.5rem;
   text-align: center;
 }
 
@@ -647,7 +639,6 @@ footer {
 
 /* -------- Tablet & down -------- */
 @media (max-width: 900px) {
-
   /* Menu columns stack */
   .menu-section {
     flex-direction: column;
@@ -664,10 +655,8 @@ footer {
   }
 }
 
-
 /* -------- Mobile -------- */
 @media (max-width: 700px) {
-
   /* Nav: title left, hamburger right */
   .nav-container {
     flex-direction: row;
@@ -676,15 +665,15 @@ footer {
   }
 
   .site-title {
-    font-size: 1.9rem;    /* was 3em */
+    font-size: 1.9rem; /* was 3em */
     line-height: 1.1;
   }
 
   .title-sub {
-    display: block;       /* forces "Brews & ..." to behave predictably */
+    display: block; /* forces "Brews & ..." to behave predictably */
     font-size: 0.95rem;
     letter-spacing: 0.18em; /* reduce spacing so it doesn't wrap weird */
-    margin-left: 0;         /* remove left offset on mobile */
+    margin-left: 0; /* remove left offset on mobile */
     margin-top: 0.15rem;
   }
 
@@ -698,23 +687,28 @@ footer {
     display: block;
   }
 
-    /* --- HERO: prevent overlap on mobile --- */
+  /* --- HERO: prevent overlap on mobile --- */
   .hero-image {
-    margin-bottom: 0;     /* remove the -5rem overlap */
+    margin-bottom: 0; /* remove the -5rem overlap */
     max-width: 100%;
   }
 
   .title-1 {
-    font-size: 5.5rem;    /* was 10rem */
+    font-size: 5.5rem; /* was 10rem */
     letter-spacing: -0.3rem;
     margin-bottom: 1.5rem;
   }
 
-  .title-2 { font-size: 2.2rem; }
-  .title-3 { font-size: 1.4rem; }
+  .title-2 {
+    font-size: 2.2rem;
+  }
+  .title-3 {
+    font-size: 1.4rem;
+  }
 
-  .headline { font-size: 2.5rem; }
-
+  .headline {
+    font-size: 2.5rem;
+  }
 
   /* Form becomes 1 column */
   .grid-2 {
@@ -732,23 +726,18 @@ footer {
     font-size: 1.1rem;
   }
 
-    /* Only animate the menu when it is open on mobile */
+  /* Only animate the menu when it is open on mobile */
   .mobile-menu:not([hidden]) {
     transform: translateY(0);
     opacity: 1;
   }
-
 }
 
 /* -------- Small phones -------- */
 @media (max-width: 500px) {
-
   /* Photo blocks single column */
   .photo-block-inner img {
     flex: 1 1 100%;
     max-width: 100%;
   }
-
 }
-
-
